@@ -1,0 +1,15 @@
+<div class="adjust-volume">
+	<div class="alert alert-info" role="alert">
+	  <p>Please adjust the volume of song to a comfortable loudness and Press Start the test to continue </p>
+	  <p>Note: Make sure your speakers are turned on. You can adjust the volume on both the screen and your computer or tablet.</p>
+	</div>
+	<button type="button" class="btn btn-default" ng-click="$ctrl.audio.paused ? $ctrl.audio.play() : $ctrl.audio.pause()">Play/Pause</button>
+	<div class="control" ng-init="$ctrl.audio.play()">
+		<label>Volume: {{$ctrl.audio.volume}}</label>
+		<input id="volume-control" type="range" min=0 max=1 step=0.01 ng-model="$ctrl.audio.volume">
+	</div>
+	<!-- 为什么不管用啦！ -->
+	<form action="#!/test">
+		<button type="button" class="btn btn-default" ng-click="$ctrl.setPara($ctrl.audio.volume)">Start the test</button>
+	</form>
+</div>

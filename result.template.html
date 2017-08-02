@@ -1,0 +1,5 @@
+<h2>Hearing Test Result</h2>
+<p class="test-result">Hearing Level : {{$ctrl.level}}.</p>
+<div class="alert alert-danger" role="alert" ng-if="$ctrl.level>=1 && $ctrl.level<=3"><p>{{$ctrl.message}}</p></div>
+<div class="alert alert-info" role="alert" ng-if="$ctrl.level>=4 && $ctrl.level<=7"><p>{{$ctrl.message}}</p></div>
+<div class="alert alert-success" role="alert" ng-if="$ctrl.level>=8"><p>{{$ctrl.message}}</p></div>

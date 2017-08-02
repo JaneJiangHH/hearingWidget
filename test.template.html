@@ -1,0 +1,5 @@
+<button type="button" id="play-again" class="btn btn-default" ng-click="$ctrl.playSounds($ctrl.noiseBuffer, $ctrl.tripleBuffer)">Play Again</button>
+<div class="keypadContainer" ng-init="$ctrl.init()">
+	<input id="triple" type="text" placeholder="Enter digits" ng-model="$ctrl.numbers"/>
+	<bc-keypad bc-number-model="$ctrl.numbers" bc-max-length="3" bc-left-button="backspace" bc-right-button="submit" bc-right-button-method="$ctrl.next($ctrl.numbers)"></bc-keypad>
+</div>
