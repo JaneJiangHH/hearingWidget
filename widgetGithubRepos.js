@@ -48,7 +48,7 @@ var customizeTest = angular.module('customizeTest').component('customizeTest', {
 var adjustVolume = angular.module('adjustVolume').component('adjustVolume', {
     controller: ['ngAudio', function AdjustController(ngAudio) {
         var self = this;
-        self.audio =  ngAudio.load('sound/adjustVolume.mp3');
+        self.audio =  ngAudio.load('https://github.com/JaneJiangHH/hearingWidget/blob/master/sound/adjustVolume.mp3?raw=true');
         // set the default volume to 50%
         if(self.audio) {
             self.audio.volume = 0.5;
@@ -100,7 +100,7 @@ var test = angular.module('test').component('test', {
             self.random = Math.floor(Math.random()*(19 - 0 + 1) + 0);
             self.triple =  triples[self.random];
             // the route of the triple selected
-            self.triplePath = 'sound/triples/sound' + self.triple + '.wav';
+            self.triplePath = 'https://github.com/JaneJiangHH/hearingWidget/blob/master/sound/triples/sound' + self.triple + '.wav?raw=true';
         };
 
         // initialize for playing sounds
@@ -145,7 +145,7 @@ var test = angular.module('test').component('test', {
 
         // function for loading noise sound
         self.loadNoise = function loadNoise() {
-            self.request1.open('GET', 'sound/noise.wav', true);
+            self.request1.open('GET', 'https://github.com/JaneJiangHH/hearingWidget/blob/master/sound/noise.wav?raw=true', true);
             self.request1.responseType = 'arraybuffer';
             // decode asynchronously
             self.request1.onload = function() {

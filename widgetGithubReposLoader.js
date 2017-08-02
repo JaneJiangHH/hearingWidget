@@ -49,7 +49,7 @@
         buildWidgetHtml(function(){
             var widgetJS = document.createElement("script");
             widgetJS.type = "text/javascript";
-            widgetJS.src = "widgetGithubRepos.js"; //widgetURL
+            widgetJS.src = "https://raw.githubusercontent.com/JaneJiangHH/hearingWidget/master/widgetGithubRepos.js"; //widgetURL
             (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(widgetJS);
         });
     }
@@ -65,7 +65,7 @@
 
     function loadTemplate(callback) {
         var ajax = new XMLHttpRequest();
-		ajax.open("GET","widgetGithubRepos.html");
+		ajax.open("GET","https://raw.githubusercontent.com/JaneJiangHH/hearingWidget/master/widgetGithubRepos.html");
 		ajax.send();
 		ajax.onreadystatechange=function(){
 			if(ajax.readyState == 4 && ajax.status == 200){
